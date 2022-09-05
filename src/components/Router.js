@@ -2,8 +2,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer';
 import Home from '../pages/Home';
-import Signin from '../pages/Signin';
-import Signup from '../pages/Signup.js';
+import Signin from '../pages/Sign-in';
+import Signup from '../pages/Sign-up';
 import User from '../pages/User';
 //import Transactions from '../pages/Transactions';
 import Error404 from '../pages/Error404';

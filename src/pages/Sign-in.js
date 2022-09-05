@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react"
 import { useNavigate, Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { signinUser, setRememberMe, getUserProfile } from "../utils/slices/userIdSlice"
+import { signinUser, setRememberMe, getUserProfile } from "../utils/slice/userIdSlice"
 import { rememberMeSelector, statusSelector, userInfosSelector } from "../utils/selectors"
 
 
