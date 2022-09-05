@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { backgroundImage } from '../assets/bank-tree.jpeg'
-import { initialProfil } from '../utils/slice/userIdSlice'
+import { initProfile } from '../utils/slice/userIdSlice'
 import Feature from '../components/home/Feature'
 /**
  * Homepage display
@@ -12,7 +12,7 @@ const Home = () => {
 
     //Init user profil
     useEffect(() => {
-        dispatch(initialProfil())
+        dispatch(initProfile())
     })
 
     const features = [
