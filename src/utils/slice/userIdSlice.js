@@ -358,7 +358,8 @@ const { actions, reducer } = createSlice({
                     draft.infos.lastName = action.payload.data.lastName
                     draft.infos.createdAt = action.payload.data.createdAt
                     localStorage.setItem('ARGENTBANK_rememberMe', action.payload.rememberMe)
-                    // Add token to sessionStorage on signin
+
+                    // Add token to sessionStorage on sign-in
                     // Token should be managed by a cookie with 'HTMLOnly' parameter served from API
                     sessionStorage.setItem('ARGENTBANK_token', action.payload.bearerToken)
                     if (draft.infos.firstName !== null) {
