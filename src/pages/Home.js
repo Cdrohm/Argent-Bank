@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { backgroundImage } from '../assets/bank-tree.jpeg'
+//import { background } from '../assets/bank-tree.jpeg'
 import { initProfile } from '../utils/slice/userIdSlice'
 import Feature from '../components/home/Feature'
 /**
@@ -37,8 +37,8 @@ const Home = () => {
 
     return (
         <main className="Home main">
-            <div className="hero" style={{ backgroundImage: `url(${backgroundImage})`}}>
-                <section className="content">
+            <div className="hero" style={{ backgroundImage: `url(${require("../assets/bank-tree.jpeg")})` }}>
+                <section className="hero-content">
                     <h2 className="sr-only">Promoted Content</h2>
                     <p className="subtitle">No fees.</p>
                     <p className="subtitle">No minimum deposit.</p>
