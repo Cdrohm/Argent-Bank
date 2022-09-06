@@ -7,6 +7,7 @@ import { rememberMeSelector, statusSelector, userInfosSelector } from "../utils/
 
 /**
  * A component who makes a form for sign in
+ * use "eslint-disable-next-line react-hooks/exhaustive-deps" to disable rule for next line 
  * @returns React component
  */
 const Signin = () => {
@@ -37,6 +38,7 @@ const Signin = () => {
       const token = sessionStorage.ARGENTBANK_token
       dispatch(getUserProfile(token))
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [connected])
 
   //if profile fetched, launch the user page with id
@@ -44,6 +46,7 @@ const Signin = () => {
     if (connected) {
       navigate(`/user/${userId}`)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userId])
 
   // Dispatch user's credentials to gain access to user's Page
@@ -62,7 +65,7 @@ const Signin = () => {
 
   // Validate each input and sets value for email & password
   function validateForm(type, value) {
-    const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
+    const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/
     switch (type) {
       case 'email':
         setEmail(value)
@@ -123,7 +126,7 @@ const Signin = () => {
           </div>
           <input className="sign-in-button" type="submit" value="Sign In" />
         </form>
-        <Link to="/signup">No account? Signup here...</Link>
+        <Link to="/signup">No account? Signup here!</Link>
       </section>
     </main>
   )
