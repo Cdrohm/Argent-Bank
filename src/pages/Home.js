@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-//import { background } from '../assets/bank-tree.jpeg'
 import { initProfile } from '../utils/slice/userIdSlice'
 import Feature from '../components/home/Feature'
 /**

@@ -3,6 +3,7 @@ import { useNavigate, Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { signinUser, setRememberMe, getUserProfile } from "../utils/slice/userIdSlice"
 import { rememberMeSelector, statusSelector, userInfosSelector } from "../utils/selectors"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 /**
@@ -98,7 +99,7 @@ const Signin = () => {
   return (
     <main className="main bg-dark">
       <section className="sign-in-content">
-        <i className="fa fa-user-circle sign-in-icon"></i>
+      <FontAwesomeIcon className='fa fa-circle-user' icon="circle-user" />
         <h1>Sign In</h1>
         <form onSubmit={e => logIn(e)}>
           <div className="input-wrapper">
