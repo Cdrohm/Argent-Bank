@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 /**
  * make the 3 features on homepage
- * @param {object} value - values to build a feature component
+ * @param {object} value - values to build a feature component with icon
  * @returns react component.
  */
 const Feature = ({ value }) => {

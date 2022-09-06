@@ -29,7 +29,7 @@ const Home = () => {
         },
 
         {
-            tupe: "security",
+            type: "security",
             title: "Security you can trust",
             text: "We use top of the line encryption to make sure your data and money is always safe.",
         }
