@@ -54,6 +54,7 @@ const Transaction = ({ data, token, index }) => {
         details.current.className = 'transaction details'
     }
 
+    //return 
     return (
         <section className="account">
             <div className="account-content-wrapper">
