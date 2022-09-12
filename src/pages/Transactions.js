@@ -36,7 +36,7 @@ const Transactions = () => {
                 navigate('/signin')
             }
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
     }, [token])
 
 
@@ -48,7 +48,7 @@ const Transactions = () => {
             dispatch(initProfile())
             navigate('/signin')
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
     }, [id])
 
     // wait for data to be fetched

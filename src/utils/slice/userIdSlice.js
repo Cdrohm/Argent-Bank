@@ -298,6 +298,7 @@ export function updateTransactionDetails(token, id, newData) {
                     headers: { Authorization: token }
                 })
             const transactions = response.data.body
+            console.log(transactions);
             dispatch(resolvedUpdateDetails(transactions, id))
         } catch (error) {
             console.log('ERROR fetching transactions -', error)
