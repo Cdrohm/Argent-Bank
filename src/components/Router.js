@@ -12,7 +12,7 @@ import Error404 from '../pages/Error404';
 
 /**
  * BrowserRouter is return by the router function and contains header, routes and footer components
- * @returns BrowserRouter with routes and components
+ * @returns BrowserRouter with routes and components (for each user)
  */
  function Router() {
   return (
