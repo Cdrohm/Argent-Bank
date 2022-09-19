@@ -21,7 +21,7 @@ const Transactions = () => {
     const [isLoading, setLoading] = useState(true)
 
     //token to grant access or throw to /sign-in page
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+ 
     useEffect(() => {
         if (!token) {
             dispatch(initProfile())
@@ -37,12 +37,12 @@ const Transactions = () => {
                 navigate('/signin')
             }
         }
-    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [token])
 
 
     // protect and secure userId route
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
     useEffect(() => {
         console.log('PARAMID-', userId, 'ID-', id);
         console.log('TRANSACTIONS -', transactions)
@@ -50,7 +50,7 @@ const Transactions = () => {
             dispatch(initProfile())
             navigate('/signin')
         }
-    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id])
 
     // wait for data to be fetched
