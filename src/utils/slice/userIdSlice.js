@@ -214,6 +214,7 @@ export function getUserTransactions(token) {
                     headers: { Authorization: token }
                 })
             const data = response.data.body
+            console.log(data)
             dispatch(resolvedTransactions(data))
         } catch (error) {
             console.log('ERROR fetching transactions -', error)

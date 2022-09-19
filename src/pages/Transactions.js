@@ -21,6 +21,7 @@ const Transactions = () => {
     const [isLoading, setLoading] = useState(true)
 
     //token to grant access or throw to /sign-in page
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
         if (!token) {
             dispatch(initProfile())
@@ -41,6 +42,7 @@ const Transactions = () => {
 
 
     // protect and secure userId route
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
         console.log('PARAMID-', userId, 'ID-', id);
         console.log('TRANSACTIONS -', transactions)
@@ -61,6 +63,7 @@ const Transactions = () => {
 
     return (
         <main className="main bg-dark">
+            { console.log('ca marche ici') }
             <div className="header transactions-header">
                 <div className='back'>
                     <Link to={`/user/${userId}`}><FontAwesomeIcon className='fa fa-sign-out' icon="arrow-left" /> Back </Link>
@@ -69,9 +72,13 @@ const Transactions = () => {
                 <h1>$2,082.79</h1>
             </div>
             <h2 className="sr-only">Transactions</h2>
+            
             {!isLoading && transactions.data.map((transaction, i) => (
+
                 <Transaction data={transaction} token={token} index={i} key={`transaction-${i}`} />
+                
             ))}
+            { console.log(transactions)}
         </main>
     )
 }

@@ -57,6 +57,7 @@ const Transaction = ({ data, token, index }) => {
     //return 
     return (
         <section className="account">
+            { console.log('Je suis là! enfin!') }
             <div className="account-content-wrapper">
                 <h3 className="transaction account-title">{description} ({id})</h3>
                 <div className='amounts'>
