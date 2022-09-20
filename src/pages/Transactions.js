@@ -37,20 +37,20 @@ const Transactions = () => {
                 navigate('/signin')
             }
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+  
     }, [token])
 
 
     // protect and secure userId route
     
     useEffect(() => {
-        console.log('PARAMID-', userId, 'ID-', id);
-        console.log('TRANSACTIONS -', transactions)
+        //console.log('PARAMID-', userId, 'ID-', id);
+        //console.log('TRANSACTIONS -', transactions)
         if (userId !== id) {
             dispatch(initProfile())
             navigate('/signin')
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+   
     }, [id])
 
     // wait for data to be fetched
