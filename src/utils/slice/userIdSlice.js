@@ -142,6 +142,7 @@ export function getUserProfile(token) {
             return
         }
         try {
+            console.log('hey13254315')
             const response = await axios.post(
                 'http://127.0.0.1:3001/api/v1/user/profile',
                 { request: "getUserProfile" },
@@ -149,6 +150,7 @@ export function getUserProfile(token) {
                     headers: { Authorization: token }
                 })
             const data = await response.data.body
+            console.log(data)
             dispatch(resolvedUser(token, rememberMe, data))
         } catch (error) {
             console.log('ERROR CONNECTING -', error)
@@ -215,7 +217,7 @@ export function getUserTransactions(token) {
                     headers: { Authorization: token }
                 })
             const data = response.data.body
-            console.log(data)
+            console.log(response.data)
             dispatch(resolvedTransactions(data))
         } catch (error) {
             console.log('ERROR fetching transactions -', error)

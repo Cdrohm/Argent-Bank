@@ -72,13 +72,13 @@ const Transactions = () => {
                 <h1>$2,082.79</h1>
             </div>
             <h2 className="sr-only">Transactions</h2>
+            { console.log(transactions)}
             
             {!isLoading && transactions.data.map((transaction, i) => (
 
                 <Transaction data={transaction} token={token} index={i} key={`transaction-${i}`} />
                 
             ))}
-            { console.log(transactions)}
         </main>
     )
 }

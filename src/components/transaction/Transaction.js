@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
  * @param {number} index - index number of the ticket
  * @returns react component.
  */
-const Transaction = ({ data, token, index }) => {
+ const Transaction = ({ data, token, index }) => {
     const dispatch = useDispatch()
     const { id, date, description, amount, balance } = data
     const { type, category, notes } = useSelector(state => transactionDetailSelector(state, index))
@@ -21,29 +21,29 @@ const Transaction = ({ data, token, index }) => {
     const [edit, setEdit] = useState(false)
     const details = useRef(null)
 
-    //get values from Store
+    // Get values from Store
     useEffect(() => {
         setType(type)
         setCategory(category)
         setNotes(notes)
     }, [type, category, notes])
 
-    //display details by accessing API and add show className
+    // Display details by accessing API and add 'show' className
     function displayDetails() {
         dispatch(getTransactionDetails(token, id))
         setEdit(true)
         details.current.className = 'transaction details show'
     }
 
-    //hide details
+    // Hide details
     function hideDetails() {
-        console.log('NEW VALUES FOR DETAILS -', newType, newCategory, newNotes);
+        // console.log('NEW VALUES FOR DETAILS -', newType, newCategory, newNotes);
         dispatch(updateTransactionDetails(token, id, { newType, newCategory, newNotes }))
         setEdit(false)
         details.current.className = 'transaction details'
     }
 
-    //change type from select box
+    // Change type from select box
     function changeType(e) {
         setType(e.target.value)
     }
@@ -54,10 +54,8 @@ const Transaction = ({ data, token, index }) => {
         details.current.className = 'transaction details'
     }
 
-    //return 
     return (
         <section className="account">
-            { console.log('Je suis là! enfin!') }
             <div className="account-content-wrapper">
                 <h3 className="transaction account-title">{description} ({id})</h3>
                 <div className='amounts'>
@@ -114,7 +112,8 @@ const Transaction = ({ data, token, index }) => {
     )
 }
 
-//PropTypes
+export default Transaction
+
 Transaction.propTypes = {
     data: PropTypes.objectOf(
         PropTypes.oneOfType([
@@ -127,6 +126,3 @@ Transaction.propTypes = {
     token: PropTypes.string,
     index: PropTypes.number,
 }
-
-export default Transaction
-
