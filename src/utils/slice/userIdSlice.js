@@ -204,6 +204,7 @@ export function updateUserProfile(token, values) {
  * @returns A thunk
  */
 export function getUserTransactions(token) {
+    console.log('here')
     console.log('FETCHING TRANSACTIONS')
     return async (dispatch) => {
         dispatch(fetchingTransactions())
