@@ -9,7 +9,7 @@ import {
 
 import { transactionsSelector } from '../utils/selectors'
 import { useNavigate, useParams, Link } from 'react-router-dom'
-import Transaction from '../components/transaction/Transaction'
+import Transaction from '../components/transactions/Transaction'
 
 const Transactions = () => {
     const dispatch = useDispatch()

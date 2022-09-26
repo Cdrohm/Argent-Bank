@@ -4,7 +4,7 @@ import Router from './components/Router';
 import store from './utils/store'
 import { Provider } from 'react-redux'
 
-import "./style/index.css"
+import "./style/index.scss"
 import { faCircleUser, faSignOut, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'; 
 
