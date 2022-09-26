@@ -63,7 +63,7 @@ const Transactions = () => {
 
     return (
         <main className="main bg-dark">
-            { console.log('ca marche ici') }
+            { console.log('ok ici') }
             <div className="header transactions-header">
                 <div className='back'>
                     <Link to={`/user/${userId}`}><FontAwesomeIcon className='fa fa-sign-out' icon="arrow-left" /> Back </Link>
