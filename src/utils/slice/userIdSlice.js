@@ -235,6 +235,7 @@ export function getUserTransactions(token) {
  */
  export function getTransactionDetails(token, id) {
     console.log(`FETCHING TRANSACTION n°${id}`)
+    console.log('here')
     return async (dispatch) => {
         try {
             const response = await axios.post(
