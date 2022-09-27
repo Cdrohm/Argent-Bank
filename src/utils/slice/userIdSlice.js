@@ -150,7 +150,6 @@ export function getUserProfile(token) {
                     headers: { Authorization: token }
                 })
             const data = await response.data.body
-            console.log(data)
             dispatch(resolvedUser(token, rememberMe, data))
         } catch (error) {
             console.log('ERROR CONNECTING -', error)
@@ -206,7 +205,6 @@ export function updateUserProfile(token, values) {
  * @returns A thunk
  */
 export function getUserTransactions(token) {
-    console.log('here')
     console.log('FETCHING TRANSACTIONS')
     return async (dispatch) => {
         dispatch(fetchingTransactions())
@@ -246,9 +244,14 @@ export function getTransactionDetails(token, id) {
                     headers: { Authorization: token }
                 })
             const details = response.data.body
+            
             dispatch(resolvedTransactionDetails(details, id))
         } catch (error) {
             console.log('ERROR fetching transactions -', error)
+            console.error("Error response:");
+            console.error(error.response.data);    // ***
+            console.error(error.response.status);  // ***
+            console.error(error.response.headers);
             dispatch(rejectedTransactionDetails(error))
         }
     }
@@ -302,7 +305,6 @@ export function updateTransactionDetails(token, id, newData) {
                     headers: { Authorization: token }
                 })
             const transactions = response.data.body
-            console.log(transactions);
             dispatch(resolvedUpdateDetails(transactions, id))
         } catch (error) {
             console.log('ERROR fetching transactions -', error)
@@ -329,6 +331,7 @@ const { actions, reducer } = createSlice({
             draft.status = 'void'
             draft.infos = initialState.infos
             draft.transactions = initialState.transactions
+
             // Remove token from sessionStorage on logout
             // Token should be managed by a cookie with 'HTMLOnly' parameter served from API
             sessionStorage.removeItem('ARGENTBANK_token')
