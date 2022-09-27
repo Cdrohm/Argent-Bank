@@ -37,7 +37,7 @@ import PropTypes from 'prop-types';
 
     // Hide details
     function hideDetails() {
-        // console.log('NEW VALUES FOR DETAILS -', newType, newCategory, newNotes);
+        console.log('NEW VALUES FOR DETAILS -', newType, newCategory, newNotes);
         dispatch(updateTransactionDetails(token, id, { newType, newCategory, newNotes }))
         setEdit(false)
         details.current.className = 'transaction details'

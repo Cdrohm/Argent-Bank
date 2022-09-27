@@ -44,8 +44,6 @@ const Transactions = () => {
     // protect and secure userId route
     
     useEffect(() => {
-        //console.log('PARAMID-', userId, 'ID-', id);
-        //console.log('TRANSACTIONS -', transactions)
         if (userId !== id) {
             dispatch(initProfile())
             navigate('/signin')
@@ -63,7 +61,6 @@ const Transactions = () => {
 
     return (
         <main className="main bg-dark">
-            { console.log('ok ici') }
             <div className="header transactions-header">
                 <div className='back'>
                     <Link to={`/user/${userId}`}><FontAwesomeIcon className='fa fa-sign-out' icon="arrow-left" /> Back </Link>

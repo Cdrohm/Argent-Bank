@@ -235,7 +235,6 @@ export function getUserTransactions(token) {
  */
  export function getTransactionDetails(token, id) {
     console.log(`FETCHING TRANSACTION n°${id}`)
-    console.log('here')
     return async (dispatch) => {
         try {
             const response = await axios.post(
@@ -245,6 +244,7 @@ export function getUserTransactions(token) {
                     headers: { Authorization: token }
                 })
             const details = response.data.body
+            console.log(response.data.body)
             dispatch(resolvedTransactionDetails(details, id))
         } catch (error) {
             console.log('ERROR fetching transactions -', error)
