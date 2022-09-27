@@ -233,7 +233,7 @@ export function getUserTransactions(token) {
  * @param {string} id - The transaction ID
  * @returns A thunk
  */
-export function getTransactionDetails(token, id) {
+ export function getTransactionDetails(token, id) {
     console.log(`FETCHING TRANSACTION n°${id}`)
     return async (dispatch) => {
         try {
@@ -244,19 +244,13 @@ export function getTransactionDetails(token, id) {
                     headers: { Authorization: token }
                 })
             const details = response.data.body
-            
             dispatch(resolvedTransactionDetails(details, id))
         } catch (error) {
             console.log('ERROR fetching transactions -', error)
-            console.error("Error response:");
-            console.error(error.response.data);    // ***
-            console.error(error.response.status);  // ***
-            console.error(error.response.headers);
             dispatch(rejectedTransactionDetails(error))
         }
     }
 }
-
 
 /**
  * DELETE user transaction {ID} details
