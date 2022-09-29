@@ -235,7 +235,10 @@ export function getUserTransactions(token) {
  */
  export function getTransactionDetails(token, id) {
     console.log(`FETCHING TRANSACTION n°${id}`)
-    return async (dispatch) => {
+    return async (dispatch, getState) => {
+        console.log(getState())
+        console.log(token)
+       // const state = getState();
         try {
             const response = await axios.post(
                 `http://127.0.0.1:3001/api/v1/user/transaction/${id}`,
@@ -443,6 +446,7 @@ const { actions, reducer } = createSlice({
 
             reducer: (draft, action) => {
                 let transactionIndex;
+                console.log(transactionIndex)
                 draft.transactions.data.forEach((transaction, i) => {
                     console.log('COMPARE -', transaction.id, action.payload.id);
                     if (transaction.id === action.payload.id) {

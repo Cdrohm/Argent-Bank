@@ -68,9 +68,7 @@ const Transactions = () => {
                 <h3>Argent Bank Checking (x8349)</h3>
                 <h1>$2,082.79</h1>
             </div>
-            <h2 className="sr-only">Transactions</h2>
-            { console.log(transactions)}
-            
+            <h2 className="sr-only">Transactions</h2>          
             {!isLoading && transactions.data.map((transaction, i) => (
 
                 <Transaction data={transaction} token={token} index={i} key={`transaction-${i}`} />
