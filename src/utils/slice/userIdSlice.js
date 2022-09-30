@@ -40,7 +40,6 @@ export function setRememberMe(value) {
 
 
 /* --------------- USER PROFILE ---------------- */
-
 /**
  * LOGOUT
  * Initiate state on logout, keeps rememberMe state
@@ -196,7 +195,6 @@ export function updateUserProfile(token, values) {
 
 
 /* --------------- TRANSACTIONS PART---------------- */
-
 /**
  * FETCH user transactions
  * returns a thunk that dispatches a fetching action, then makes an API call, then dispatches a
@@ -235,10 +233,7 @@ export function getUserTransactions(token) {
  */
  export function getTransactionDetails(token, id) {
     console.log(`FETCHING TRANSACTION n°${id}`)
-    return async (dispatch, getState) => {
-        console.log(getState())
-        console.log(token)
-       // const state = getState();
+    return async (dispatch) => {
         try {
             const response = await axios.post(
                 `http://127.0.0.1:3001/api/v1/user/transaction/${id}`,
