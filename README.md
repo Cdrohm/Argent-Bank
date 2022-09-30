@@ -1,6 +1,13 @@
 # ARGENT BANK PROJECT
 ![RemedeAgency](https://user.oc-static.com/upload/2020/08/14/15974097192929_image1.png "RemedeAgency")
 ![Argent Bank](https://user.oc-static.com/upload/2020/08/14/1597410191519_image2.png "Argent Bank")
+***Argent Bank is a new bank looking to break into the sector. We will help him set up his application.***
+
+## Use an API for a bank user account with React
+- **Phase 1: User Authentication - Creation of a web application allowing customers to log in and manage their accounts and profile**
+
+**- Phase 2: Transactions - This would be to specify the API endpoints needed for a possible second mission once we have completed the first**
+
 # **1. BACK END API**
 
 You need to fork this repo: https://github.com/Cdrohm/Project-10-Bank-API and follow instructions in readme.md for get the API.
