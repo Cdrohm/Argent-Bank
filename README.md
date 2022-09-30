@@ -1,3 +1,45 @@
+# ARGENT BANK PROJECT
+![RemedeAgency](https://user.oc-static.com/upload/2020/08/14/15974097192929_image1.png "RemedeAgency")
+![Argent Bank](https://user.oc-static.com/upload/2020/08/14/1597410191519_image2.png "Argent Bank")
+# **1. BACK END API**
+
+You need to fork this repo: https://github.com/Cdrohm/Project-10-Bank-API and follow instructions in readme.md for get the API.
+
+*This specific code is to be used to use all the features present in the frontend application.
+The original code provided having been modified, please use the one provided in the previous link.*
+
+URL/PORT
+The default micro API URL is http://localhost:3001
+
+
+# 2. FRONT-END
+
+The FRONT-END code of the application is available on this repository. The npm or yarn package manager is required.
+- Please clone the project locally:
+` https://github.com/Cdrohm/Argent-Bank.git`
+
+- Then navigate to your local repository and install the dependencies using:
+
+`npm install`
+
+- Launch the application with:
+
+`npm start`
+
+## USE
+
+Two profiles are preloaded in order to test the application:
+
+1. TONY STARK
+`Email: tony@stark.com,
+Password: password123`
+
+2. STEVE RODGERS
+`Email: steve@rogers.com,
+Password: password456`
+
+*You can create a new profile, however, the "transaction" part will be empty, as the application is under development.*
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
