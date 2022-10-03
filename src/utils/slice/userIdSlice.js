@@ -306,7 +306,7 @@ export function updateTransactionDetails(token, id, newData) {
     }
 }
 
-
+//Action creator
 
 /**
  * REDUCER and ACTIONS build with Redux Toolkit createSlice()
