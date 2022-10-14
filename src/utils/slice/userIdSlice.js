@@ -141,7 +141,6 @@ export function getUserProfile(token) {
             return
         }
         try {
-            console.log('hey13254315')
             const response = await axios.post(
                 'http://127.0.0.1:3001/api/v1/user/profile',
                 { request: "getUserProfile" },
